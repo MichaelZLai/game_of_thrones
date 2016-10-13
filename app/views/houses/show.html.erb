@@ -1,2 +1,15 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<%= link_to "Edit House", edit_house_path(@house) %>
+<%= link_to "Delete House", house_path(@house), method: :delete, class: "delete"%>
+
+  <h2><%= @house.name %></h2>
+    <img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
+      <p>"<%= @house.motto %>"</p>
+      <p>Located: <%= @house.location %></p>
+  <!-- <p>Great House: <%= @house.great_house %></p> -->
+
+<div class="house_characters">
+  <% @characters.each do |char| %>
+    <p><%= char.name %></p>
+    <img src="<%= char.img_url %>" alt="<%= char.name %> image" />
+  <% end %>
+</div>

@@ -1,2 +1,20 @@
-<h1>Houses#edit</h1>
-<p>Find me in app/views/houses/edit.html.erb</p>
+<h2>Edit <%= @house.name %></h2>
+
+<img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
+
+<%= form_for @house do |f| %>
+
+<p><%= f.label :name %>
+<%= f.text_field :name %></p>
+
+<p><%= f.label :location %>
+<%= f.text_field :location %></p>
+
+<p><%= f.label :motto %>
+<%= f.text_field :motto %></p>
+
+<p><%= f.label :img_url %>
+<%= f.text_field :img_url %></p>
+
+<%= f.submit "Edit #{@house.name}!" %>
+<% end %>

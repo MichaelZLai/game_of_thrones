@@ -1,2 +1,20 @@
-<h1>Houses#new</h1>
-<p>Find me in app/views/houses/new.html.erb</p>
+<h2>Add a New House</h2>
+
+<img src="http://vignette1.wikia.nocookie.net/uncyclopedia/images/9/97/Coat_of_arms_of_Armenia_svg.png/revision/latest?cb=20121106001847" alt="New House image" />
+
+<%= form_for @house do |f| %>
+
+<p><%= f.label :name %>
+<%= f.text_field :name %></p>
+
+<p><%= f.label :location %>
+<%= f.text_field :location %></p>
+
+<p><%= f.label :motto %>
+<%= f.text_field :motto %></p>
+
+<p><%= f.label :img_url %>
+<%= f.text_field :img_url %></p>
+
+<%= f.submit "Create New House!" %>
+<% end %>
