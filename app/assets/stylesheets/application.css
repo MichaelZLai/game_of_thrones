@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+
+html{
+  font-family: "Cinzel Decorative", fantasy;
+  text-decoration: none;
+  background: #D3D3D3;
+}
+h2{
+  text-align: center;
+  margin-top:60px;
+}
+h4{
+  text-align: center;
+  margin-top: 70px;
+}
+img{
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+}
+p{
+  margin-bottom: 0;
+  font-size: 13px;
+}
+nav{
+  background:#554118;
+}
+a:link, a:visited {
+    color: #EBEBEB;
+    text-decoration: none;
+}
+a:hover {
+    color: #F7E7C7;
+    text-decoration: none;
+}
+#modify{
+  font-size: 11px;
+  background: #554118;
+}
+.houses{
+  display:flex;
+  text-align: center;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.houses div{
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.house_desc{
+  text-align: center;
+  width: 240px;
+  height: 500px;
+}
+#house{
+  display:flex;
+  justify-content: space-around;
+}
+
+.house_characters div{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  text-align: center;
+}
+.house_characters img{
+  width:100px;
+  height:100px;
+  border-radius: 15px 70px 50px ;
+  border: .1px solid black;
+}
+
+.character_desc{
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.character_desc img{
+    border-radius: 15px 70px 50px ;
+}
+.edit{
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

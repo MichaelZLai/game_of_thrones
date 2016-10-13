@@ -1,9 +1,12 @@
-<%= link_to "Create House", new_house_path %>
+<div id="modify"><%= link_to "Create House", new_house_path %></div>
 
-  <h2>The Houses</h2>
-  <% @houses.each do |house| %>
-    <div class="house">
-      <h3><a href="<%= house_path(house) %>"><%= house.name %></h3>
-      <img src="<%= house.img_url %>" alt="house image" />
-    </div>
-  <% end %>
+<h2>The Houses</h2>
+  <div class="houses">
+      <% @houses.each do |house| %>
+        <a href="<%= house_path(house) %>">
+        <div style="background-image: <%= "url('#{house.img_url}');" %>">
+          <h3><%= house.name %></h3>
+        </div>
+      </a>
+      <% end %>
+  </div>

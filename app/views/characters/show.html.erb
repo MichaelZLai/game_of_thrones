@@ -1,7 +1,9 @@
-<%= link_to "Back to #{@house.name}", house_path(@house) %>
-<%= link_to "Edit #{@character.name}", edit_house_character_path(@house,@character) %>
+<div id="modify"><%= link_to "Back to #{@house.name}", house_path(@house) %> |
+<%= link_to "Edit #{@character.name}", edit_house_character_path(@house,@character) %></div>
 
 <h2><%= @character.name %></h2>
-
+<div class="character_desc">
+  <p><%= @character.origin %></p>
 <img src="<%= @character.img_url %>" alt="<%= @character.name %> Image" />
-<p><%= @character.origin %></p>
+<p><%= @character.is_dead? ? "Deceased" : "Alive" %>
+</div>

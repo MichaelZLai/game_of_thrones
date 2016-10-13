@@ -1,5 +1,9 @@
+<div id="modify"><%= link_to "Back to Houses", houses_path %>
+</div>
+
 <h2>Add a New House</h2>
 
+<div class="edit">
 <img src="http://vignette1.wikia.nocookie.net/uncyclopedia/images/9/97/Coat_of_arms_of_Armenia_svg.png/revision/latest?cb=20121106001847" alt="New House image" />
 
 <%= form_for @house do |f| %>
@@ -18,3 +22,4 @@
 
 <%= f.submit "Create New House!" %>
 <% end %>
+</div>

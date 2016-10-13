@@ -1,7 +1,9 @@
-<%= link_to "Back to #{@house.name}", house_path(@house) %>
-<%= link_to "Delete #{@character.name}", house_character_path(@house,@character), method: :delete, class: "delete" %>
+<div id="modify"><%= link_to "Back to #{@house.name}", house_path(@house) %>
+<%= link_to "Delete #{@character.name}", house_character_path(@house,@character), method: :delete, class: "delete" %></div>
 
 <h2>Edit <%= @character.name %></h2>
+
+<div class="character_desc">
 <img src="<%= @character.img_url %>" alt="<%= @character.name %> Image" />
 
 <%= form_for [@house,@character] do |f| %>
@@ -12,7 +14,7 @@
 <p><%= f.label :origin %>
 <%= f.text_field :origin %></p>
 
-<p><%= f.label :Dead? %>
+<p><%= f.label :Is_Dead? %>
   <%= f.label :is_dead, "Yup", value: true %>
   <%= f.radio_button :is_dead, true, :checked => true %>
   <%= f.label :is_dead, "Nope!", value: false %>
@@ -23,3 +25,4 @@
 
 <%= f.submit "Create New Character!" %>
 <% end %>
+</div>

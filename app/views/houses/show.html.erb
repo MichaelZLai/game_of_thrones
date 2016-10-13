@@ -1,18 +1,22 @@
-<%= link_to "Back to Houses", houses_path %>
-<%= link_to "Edit House", edit_house_path(@house) %>
-<%= link_to "Delete House", house_path(@house), method: :delete, class: "delete"%>
-<%= link_to "Add Character", new_house_character_path(@house) %>
+<div id="modify"><%= link_to "Back to Houses", houses_path %> |
+<%= link_to "Edit House", edit_house_path(@house) %> |
+<%= link_to "Delete House", house_path(@house), method: :delete, class: "delete"%> |
+<%= link_to "Add Character", new_house_character_path(@house) %></div>
 
-  <h2><%= @house.name %></h2>
-    <img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
-      <p>"<%= @house.motto %>"</p>
-      <p>Located: <%= @house.location %></p>
-  <!-- <p>Great House: <%= @house.great_house %></p> -->
+<div id="house">
+  <div class="house_desc">
+    <h2><%= @house.name %></h2>
+    <p> <%= @house.location %></p>
+      <img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
+        <p>"<%= @house.motto %>"</p>
+  </div>
 
-<div class="house_characters">
-  <% @characters.each do |char| %>
-    <a href="<%= house_character_path(@house,char) %>">
-    <p><%= char.name %></p>
-    <img src="<%= char.img_url %>" alt="<%= char.name %> image" />
-  <% end %>
+  <div class="house_characters">
+    <h4>Allegiance</h4>
+    <% @characters.each do |char| %>
+      <div><a href="<%= house_character_path(@house,char) %>">
+      <p><%= char.name %></p>
+      <img src="<%= char.img_url %>" alt="<%= char.name %> image" /></a></div>
+    <% end %>
+  </div>
 </div>

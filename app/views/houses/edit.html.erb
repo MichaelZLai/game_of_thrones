@@ -1,5 +1,9 @@
+<div id="modify"><%= link_to "Back to Houses", house_path(@house) %>
+</div>
+
 <h2>Edit <%= @house.name %></h2>
 
+<div class="edit">
 <img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
 
 <%= form_for @house do |f| %>
@@ -18,3 +22,4 @@
 
 <%= f.submit "Edit #{@house.name}!" %>
 <% end %>
+</div>

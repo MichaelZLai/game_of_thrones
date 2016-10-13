@@ -1,7 +1,8 @@
-<%= link_to "Back to #{@house.name}", house_path(@house) %>
+<div id="modify"><%= link_to "Back to #{@house.name}", house_path(@house) %></div>
 
 <h2>Create a New Character</h2>
 
+<div class="character_desc">
 <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQhsi4DraHTZempuUln1rPzn_bWvvalW3DIqGkOpKUWDm_c5ipS" alt="New Character Image" />
 
 <%= form_for [@house,@character] do |f| %>
@@ -17,3 +18,4 @@
 
 <%= f.submit "Create New Character!" %>
 <% end %>
+</div>
