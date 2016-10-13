@@ -1,2 +1,9 @@
-<h1>Characters#index</h1>
-<p>Find me in app/views/characters/index.html.erb</p>
+<h2>Characters</h2>
+
+<div class="house_characters">
+  <% @characters.each do |char| %>
+    <a href="<%= house_character_path(@house,char) %>">
+    <p><%= char.name %></p>
+    <img src="<%= char.img_url %>" alt="<%= char.name %> image" />
+  <% end %>
+</div>

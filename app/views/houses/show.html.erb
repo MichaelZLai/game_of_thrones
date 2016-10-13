@@ -1,5 +1,7 @@
+<%= link_to "Back to Houses", houses_path %>
 <%= link_to "Edit House", edit_house_path(@house) %>
 <%= link_to "Delete House", house_path(@house), method: :delete, class: "delete"%>
+<%= link_to "Add Character", new_house_character_path(@house) %>
 
   <h2><%= @house.name %></h2>
     <img src="<%= @house.img_url %>" alt="<%= @house.name %> image" />
@@ -9,6 +11,7 @@
 
 <div class="house_characters">
   <% @characters.each do |char| %>
+    <a href="<%= house_character_path(@house,char) %>">
     <p><%= char.name %></p>
     <img src="<%= char.img_url %>" alt="<%= char.name %> image" />
   <% end %>
