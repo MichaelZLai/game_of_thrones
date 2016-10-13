@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+*{
+  margin:0;
+}
 html{
   font-family: "Cinzel Decorative", fantasy;
   text-decoration: none;

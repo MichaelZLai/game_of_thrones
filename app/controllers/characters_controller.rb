@@ -1,7 +1,11 @@
 class CharactersController < ApplicationController
   def index
-    @house = House.find(params[:house_id])
-    @characters = Character.all
+    if characters_path
+      @characters = Character.all
+    else
+      @house = House.find(params[:house_id])
+      @characters = Character.all
+    end
   end
 
   def show

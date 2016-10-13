@@ -2,7 +2,7 @@
 
 <div class="house_characters">
   <% @characters.each do |char| %>
-    <a href="<%= house_character_path(@house,char) %>">
+    <a href="<%= house_character_path(char.house,char) %>">
     <p><%= char.name %></p>
     <img src="<%= char.img_url %>" alt="<%= char.name %> image" />
   <% end %>
